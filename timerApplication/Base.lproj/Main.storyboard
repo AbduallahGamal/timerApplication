@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t8X-oR-Vqv">
-                                <rect key="frame" x="0.0" y="847" width="414" height="49"/>
+                                <rect key="frame" x="0.0" y="852" width="414" height="44"/>
                                 <items>
                                     <barButtonItem title="-10" id="m4S-hV-1yO">
                                         <connections>
@@ -39,8 +39,18 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I8d-Dg-m28">
-                                <rect key="frame" x="0.0" y="64" width="414" height="44"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="300" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gx6-os-lOt">
+                                <rect key="frame" x="147" y="403" width="120" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="N0G-0M-KGt"/>
+                                    <constraint firstAttribute="height" constant="90" id="f9V-vu-HK9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="40"/>
+                                <color key="textColor" red="0.50518396896783324" green="0.067647264388230544" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I8d-Dg-m28">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <items>
                                     <navigationItem title="TIMER" id="yeG-Ht-Blc">
                                         <barButtonItem key="leftBarButtonItem" systemItem="pause" id="wDu-au-LZg">
@@ -56,22 +66,15 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gx6-os-lOt">
-                                <rect key="frame" x="147" y="403" width="120" height="90"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="120" id="N0G-0M-KGt"/>
-                                    <constraint firstAttribute="height" constant="90" id="f9V-vu-HK9"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="40"/>
-                                <color key="textColor" red="0.50518396896783324" green="0.067647264388230544" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.82626262466985401" green="0.85118575507614214" blue="0.10455677427150568" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Gx6-os-lOt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0zo-64-Gj8"/>
                             <constraint firstItem="Gx6-os-lOt" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="2xk-vZ-tWv"/>
+                            <constraint firstItem="I8d-Dg-m28" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="3JV-uX-2zO"/>
                             <constraint firstItem="I8d-Dg-m28" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="5be-pL-wJZ"/>
+                            <constraint firstItem="I8d-Dg-m28" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="AIV-AU-fYC"/>
+                            <constraint firstItem="I8d-Dg-m28" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="IJz-PK-8NB"/>
                             <constraint firstItem="I8d-Dg-m28" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="LAv-dT-kG2"/>
                             <constraint firstItem="I8d-Dg-m28" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Whs-1a-9yx"/>
                             <constraint firstItem="t8X-oR-Vqv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dop-bq-OZX"/>
