@@ -20,23 +20,43 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t8X-oR-Vqv">
                                 <rect key="frame" x="0.0" y="847" width="414" height="49"/>
                                 <items>
-                                    <barButtonItem title="-10" id="m4S-hV-1yO"/>
+                                    <barButtonItem title="-10" id="m4S-hV-1yO">
+                                        <connections>
+                                            <action selector="btn_minus:" destination="BYZ-38-t0r" id="36k-ZG-B34"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="sgs-Nh-So7"/>
-                                    <barButtonItem title="Reset" id="iPC-6b-rBj"/>
+                                    <barButtonItem title="Reset" id="iPC-6b-rBj">
+                                        <connections>
+                                            <action selector="btn_reset:" destination="BYZ-38-t0r" id="HTq-rv-we6"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="0uE-mL-dWF"/>
-                                    <barButtonItem title="+10" id="itj-5g-AF4"/>
+                                    <barButtonItem title="+10" id="itj-5g-AF4">
+                                        <connections>
+                                            <action selector="btn_add:" destination="BYZ-38-t0r" id="F1p-mh-8zv"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I8d-Dg-m28">
                                 <rect key="frame" x="0.0" y="64" width="414" height="44"/>
                                 <items>
                                     <navigationItem title="TIMER" id="yeG-Ht-Blc">
-                                        <barButtonItem key="leftBarButtonItem" systemItem="pause" id="wDu-au-LZg"/>
-                                        <barButtonItem key="rightBarButtonItem" systemItem="play" id="xPT-u4-qI0"/>
+                                        <barButtonItem key="leftBarButtonItem" systemItem="pause" id="wDu-au-LZg">
+                                            <connections>
+                                                <action selector="btn_pause:" destination="BYZ-38-t0r" id="Nvq-rM-WG0"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="play" id="xPT-u4-qI0">
+                                            <connections>
+                                                <action selector="btn_play:" destination="BYZ-38-t0r" id="m8P-nH-gru"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2019" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gx6-os-lOt">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gx6-os-lOt">
                                 <rect key="frame" x="147" y="403" width="120" height="90"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="N0G-0M-KGt"/>
@@ -60,6 +80,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="lbl_show" destination="Gx6-os-lOt" id="1l9-jo-LGP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
