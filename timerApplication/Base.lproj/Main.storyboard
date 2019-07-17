@@ -39,18 +39,8 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="300" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gx6-os-lOt">
-                                <rect key="frame" x="147" y="403" width="120" height="90"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="120" id="N0G-0M-KGt"/>
-                                    <constraint firstAttribute="height" constant="90" id="f9V-vu-HK9"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="40"/>
-                                <color key="textColor" red="0.50518396896783324" green="0.067647264388230544" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I8d-Dg-m28">
-                                <rect key="frame" x="0.0" y="64" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <items>
                                     <navigationItem title="TIMER" id="yeG-Ht-Blc">
                                         <barButtonItem key="leftBarButtonItem" systemItem="pause" id="wDu-au-LZg">
@@ -67,15 +57,32 @@
                                 </items>
                             </navigationBar>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3pp-6z-zR6">
-                                <rect key="frame" x="183" y="141" width="49" height="31"/>
+                                <rect key="frame" x="183" y="121" width="49" height="31"/>
                                 <connections>
                                     <action selector="btn_switch:" destination="BYZ-38-t0r" eventType="valueChanged" id="hAk-Za-dLZ"/>
                                 </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SwiTcheR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="53p-3O-t49">
-                                <rect key="frame" x="20" y="196" width="374" height="43"/>
+                                <rect key="frame" x="20" y="176" width="374" height="43"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="33"/>
                                 <color key="textColor" red="0.88189613382280152" green="0.26545371392791872" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="55" minValue="10" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Ryl-48-uO6">
+                                <rect key="frame" x="20" y="239" width="376" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="btn_slider:" destination="BYZ-38-t0r" eventType="valueChanged" id="mp6-Ia-zSi"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="300" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gx6-os-lOt">
+                                <rect key="frame" x="92" y="406" width="228" height="166"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="N0G-0M-KGt"/>
+                                    <constraint firstAttribute="height" constant="90" id="f9V-vu-HK9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="40"/>
+                                <color key="textColor" red="0.50518396896783324" green="0.067647264388230544" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -89,7 +96,6 @@
                             <constraint firstItem="I8d-Dg-m28" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="AIV-AU-fYC"/>
                             <constraint firstItem="I8d-Dg-m28" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="IJz-PK-8NB"/>
                             <constraint firstItem="53p-3O-t49" firstAttribute="top" secondItem="3pp-6z-zR6" secondAttribute="bottom" constant="24" id="JI4-TN-h0I"/>
-                            <constraint firstItem="I8d-Dg-m28" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="LAv-dT-kG2"/>
                             <constraint firstItem="3pp-6z-zR6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="183" id="RXs-Ru-NLI"/>
                             <constraint firstItem="53p-3O-t49" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="WaK-F1-sCI"/>
                             <constraint firstItem="I8d-Dg-m28" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Whs-1a-9yx"/>
@@ -104,6 +110,7 @@
                     <connections>
                         <outlet property="lbl_message" destination="53p-3O-t49" id="19x-cF-Rvp"/>
                         <outlet property="lbl_show" destination="Gx6-os-lOt" id="1l9-jo-LGP"/>
+                        <outlet property="slider" destination="Ryl-48-uO6" id="yKX-O6-T5v"/>
                         <outlet property="sw" destination="3pp-6z-zR6" id="4uG-7B-O8O"/>
                     </connections>
                 </viewController>

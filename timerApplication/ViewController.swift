@@ -22,6 +22,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    @IBOutlet weak var slider: UISlider!
+    @IBAction func btn_slider(_ sender: Any) {
+        lbl_show.font = UIFont.systemFont(ofSize: CGFloat(slider.value))
+    }
+    
     @IBOutlet weak var lbl_message: UILabel!
     @IBOutlet weak var sw: UISwitch!
     @IBAction func btn_switch(_ sender: Any) {
