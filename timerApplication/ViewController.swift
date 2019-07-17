@@ -21,6 +21,25 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    @IBOutlet weak var seg: UISegmentedControl!
+    @IBAction func btn_segment(_ sender: Any) {
+        if seg.selectedSegmentIndex == 0
+        {
+            view.backgroundColor = UIColor.blue
+        }
+        if seg.selectedSegmentIndex == 1
+        {
+            view.backgroundColor = UIColor.green
+        }
+        if seg.selectedSegmentIndex == 2
+        {
+            view.backgroundColor = UIColor.red
+        }
+        if seg.selectedSegmentIndex == 3
+        {
+            view.backgroundColor = UIColor.orange
+        }
+    }
     
     @IBOutlet weak var slider: UISlider!
     @IBAction func btn_slider(_ sender: Any) {

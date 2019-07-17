@@ -85,6 +85,19 @@
                                 <color key="textColor" red="0.50518396896783324" green="0.067647264388230544" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="hOW-Tn-WiR">
+                                <rect key="frame" x="-1" y="819" width="414" height="29"/>
+                                <segments>
+                                    <segment title="Blue"/>
+                                    <segment title="Green"/>
+                                    <segment title="Red"/>
+                                    <segment title="Orange"/>
+                                </segments>
+                                <color key="tintColor" red="1" green="0.2527923882" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="btn_segment:" destination="BYZ-38-t0r" eventType="valueChanged" id="1RF-Rg-Gan"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" red="0.82626262466985401" green="0.85118575507614214" blue="0.10455677427150568" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -97,19 +110,23 @@
                             <constraint firstItem="I8d-Dg-m28" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="IJz-PK-8NB"/>
                             <constraint firstItem="53p-3O-t49" firstAttribute="top" secondItem="3pp-6z-zR6" secondAttribute="bottom" constant="24" id="JI4-TN-h0I"/>
                             <constraint firstItem="3pp-6z-zR6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="183" id="RXs-Ru-NLI"/>
+                            <constraint firstItem="t8X-oR-Vqv" firstAttribute="top" secondItem="hOW-Tn-WiR" secondAttribute="bottom" id="U6O-Do-OK3"/>
                             <constraint firstItem="53p-3O-t49" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="WaK-F1-sCI"/>
                             <constraint firstItem="I8d-Dg-m28" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Whs-1a-9yx"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="53p-3O-t49" secondAttribute="trailing" constant="20" id="XUA-YK-vpR"/>
                             <constraint firstItem="t8X-oR-Vqv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dop-bq-OZX"/>
                             <constraint firstItem="t8X-oR-Vqv" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="dta-4o-d6p"/>
                             <constraint firstItem="3pp-6z-zR6" firstAttribute="top" secondItem="I8d-Dg-m28" secondAttribute="bottom" constant="33" id="gSi-vP-elA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hOW-Tn-WiR" secondAttribute="trailing" constant="1" id="k2E-Un-woE"/>
                             <constraint firstAttribute="bottom" secondItem="t8X-oR-Vqv" secondAttribute="bottom" id="mnp-we-jZW"/>
+                            <constraint firstItem="hOW-Tn-WiR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="-1" id="xSz-fg-bqT"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="lbl_message" destination="53p-3O-t49" id="19x-cF-Rvp"/>
                         <outlet property="lbl_show" destination="Gx6-os-lOt" id="1l9-jo-LGP"/>
+                        <outlet property="seg" destination="hOW-Tn-WiR" id="pJ3-3T-8BL"/>
                         <outlet property="slider" destination="Ryl-48-uO6" id="yKX-O6-T5v"/>
                         <outlet property="sw" destination="3pp-6z-zR6" id="4uG-7B-O8O"/>
                     </connections>
