@@ -21,6 +21,17 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    @IBOutlet weak var lbl_message: UILabel!
+    @IBOutlet weak var sw: UISwitch!
+    @IBAction func btn_switch(_ sender: Any) {
+        if (sw.isOn){
+            lbl_message.text = "Switch Is On"
+        }else{
+            lbl_message.text = "Switch Is Off"
+        }
+    }
+    
     @IBOutlet weak var lbl_show: UILabel!
     
     @IBAction func btn_play(_ sender: Any) {
